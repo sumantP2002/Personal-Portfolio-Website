@@ -21,7 +21,7 @@ const Intro = () => {
             <article className="about__card">
               <FaAward className="about__icon" />
               <h5>DSA Problem Solved</h5>
-              <small>700+</small>
+              <small>900+</small>
             </article>
             <article className="about__card">
               <VscFolderLibrary className="about__icon" />

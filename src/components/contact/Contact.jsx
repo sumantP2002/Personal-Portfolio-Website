@@ -40,8 +40,8 @@ const Contact = () => {
           <article className="contact__option">
             <MdOutlineEmail className="contact__option-icon" />
             <h4>Email</h4>
-            <h5>sumantgoforit2@gmail.com</h5>
-            <a href="mailto:sumantgoforit2@gmail.com">Send a message</a>
+            <h5>sumanttpc@gmail.com</h5>
+            <a href="mailto:sumanttpc@gmail.com">Send a message</a>
           </article>
         </div>
         <form ref={formRef} onSubmit={handleSubmit}>
