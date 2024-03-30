@@ -21,14 +21,15 @@ const Intro = () => {
             <article className="about__card">
               <FaAward className="about__icon" />
               <h5>DSA Problem Solved</h5>
-              <small>900+</small>
+              <small>1000+</small>
             </article>
-            <article className="about__card">
+            <a className="about__card" href='#portfolio'>
               <VscFolderLibrary className="about__icon" />
               <h5>Projects</h5>
-            </article>
+            </a>
           </div>
-          <p>Hello there! Thank you for visiting my Website. I'm an aspiring software professional with a background in engineering. I have a particular interest in software development and problem-solving. Furthermore, I found myself drawn to front-end technologies such as HTML, CSS, and JavaScript, as well as back-end technologies like Node.js, Express.js, MongoDB, and SQL.</p>
+          <p>Hello! I'm a tech enthusiast from Patna, Bihar, specializing in software development and problem-solving. With expertise in data structures, algorithms, HTML/CSS, JavaScript, Node.js, Express.js, MongoDB, and SQL, I've led successful projects showcasing front-end and back-end proficiency. Currently seeking opportunities to contribute my technical skills and innovation to a dynamic team. Let's connect and innovate together! 🚀</p>
+          
           <a href="#contact" className="btn btn-primary">Let's Talk</a>
         </div>
       </div>

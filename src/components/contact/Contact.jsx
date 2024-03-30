@@ -3,36 +3,46 @@ import emailjs from '@emailjs/browser';
 import { MdOutlineEmail } from 'react-icons/md';
 import './contact.css';
 
-const Contact = () => {
-  const [message, setMessage] = useState(false);
-  const formRef = useRef();
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setMessage(true);
-    emailjs
-      .sendForm(
-        'service_k2qawqh',
-        'template_c6rkpn6',
-        formRef.current,
-        'X7K7ebhIeOy3YwHki'
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
 
-    e.target.reset();
+const Contact = () => {
+  const [name , setName] = useState("");
+  const [mail , setMail] = useState("");
+  const [mes , setMes] = useState("");
+// ----------
+  // const nodemailer = require("nodemailer");
+  
+
+  // const sendMail = async (message) => {
+  //   const transporter = nodemailer.createTransport({
+  //     host: SMPT_HOST,
+  //     port: SMPT_PORT,
+  //     service: process.env.SMPT_SERVICE,
+  //     auth:{
+  //         user: SMPT_MAIL,
+  //         pass: SMPT_PASSWORD,
+  //     },
+  //   });
+
+  //   const mailOptions = {
+  //     from: SMPT_MAIL,
+  //     to: message.email,
+  //     subject: message.subject,
+  //     text: message.message,
+  //   };
+
+  //   await transporter.sendMail(mailOptions);
+   
+  // };
+
+
+  const handleSubmit = (e) => {
+    return;
   };
   return (
     <section id="contact">
       <h5>Get In Touch</h5>
       <h5>
-        I do receive your messages and will respond asap if the valid email is
-        provided :)
+        I do receive your messages and will respond asap :)
       </h5>
       <h2>Contact Me</h2>
       <div className="container contact__container">
@@ -44,29 +54,25 @@ const Contact = () => {
             <a href="mailto:sumanttpc@gmail.com">Send a message</a>
           </article>
         </div>
-        <form ref={formRef} onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
           <input
             type="text"
             placeholder="Your Full Name"
-            name="user_name"
             required
           />
           <input
-            type="text"
+            type='mail'
             placeholder="Your Email"
-            name="user_email"
             required
           />
           <textarea
             placeholder="Your message"
             rows="7"
-            name="message"
             required
           ></textarea>
           <button type="submit" className="btn btn-primary">
             Send Message
           </button>
-          {message && <span>Thanks, I'll reply ASAP :)</span>}
         </form>
       </div>
     </section>
